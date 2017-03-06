@@ -1,0 +1,28 @@
+html.footer div.slide-background.present {
+    background-position: bottom;
+    background-size: 50%;
+}
+
+.reveal section img{
+    position: fixed;
+    bottom: 0;
+    left: 65%;
+    width: 270px;
+    border: 0;
+}
+
+html.profile section.present{
+	text-align: left;
+}
+
+html.profile .reveal a,
+html.profile .reveal h4{
+	text-transform: inherit;
+}
+
+html .reveal h1,
+html .reveal h2,
+html .reveal h3,
+html .reveal h4{
+    color: #347EFF;
+}

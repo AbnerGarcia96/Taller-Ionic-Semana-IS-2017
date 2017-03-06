@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Ionic 2</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<link rel="stylesheet" href="/path/to/styles/default.css">
+		<script src="/path/to/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides" data-state="global">
+				<section data-background="img/footer.png" data-state="footer">
+					<h1>Desarrollo de Aplicaciones Híbridas con Ionic 2</h1>
+				</section>
+
+				<section  data-state="profile">
+					<h1>¿Quién soy?</h1>
+					<p>Abner García</p>
+					<p>Estudiante de 4to año de IS</p>
+					<p>Teléfono: +504 8784-5765</p>
+					<p>Correo: abnerjosgarfer@yahoo.com</p>
+					<p>Github: <a href="https://www.github.com/AbnerGarcia96">AbnerGarcia96</a></p>
+
+					<img src="img/profile.jpg" alt="">
+				</section>
+
+				<section data-background="img/footer.png" data-state="footer">
+					<h2>Descripción del taller</h2>
+					<p>El objetivo de este taller es aprender conceptos básicos sobre el desarrollo de aplicaciones híbridas utilizando Ionic 2, la segunda y más reciente versión de Ionic Framework y lograr recuperar, insertar, modificar y eliminar información de una base de datos remota</p>
+				</section>
+
+				<section data-background="img/footer.png" data-state="footer">
+					<h2>Temario</h2>
+					<ul>
+						<li>
+							<p>Introducción a Angular 2</p>
+						</li>
+						<li>
+							<p>Introducción a Ionic 2</p>
+						</li>
+						<li>
+							<p>Conexión a Google Firebase</p>
+						</li>
+					</ul>
+				</section>
+
+				<section data-background="img/footer.png" data-state="footer">
+					<section>
+						<h1>Ionic 2</h1>
+						<p>Es la segunda y más reciente versión de Ionic Framework, el cual sirve para desarrollar aplicaciones móviles a partir de código Front-End</p>
+						<p>Utiliza HTML5 y CSS para la creación de las vistas y TypeScript para darle funcionalidad a estas vistas</p>
+					</section>
+					<section>
+						<h1>Dependencias</h1>
+						<h6>TypeScript:</h6>
+						<p>Transpilador que pasa el código de ES6 a código JS</p>
+						<pre><code class="shell">$ npm install -g typecript typings</code></pre>
+					</section>
+					<section>
+						<h1>Dependencias</h1>
+						<h6>Apache Cordova: </h6>
+						<p>Traduce el código en JavaScript a código nativo de cada sistema (Java para Android y Obj-C/Swift para iOS)</p>
+						<pre><code class="shell">$ npm install -g ionic cordova</code></pre>
+					</section>
+					<section>
+						<h1>Dependencias</h1>
+						<h6>Angular 2:</h6>
+						<p>Framework para JavaScript que nos permite utilizar ES6 para variables con tipos dentro de JavaScript</p>
+					</section>
+					<section>
+						<h1>Dependencias</h1>
+						<h6>Google Firebase: </h6>
+						<p>Servicio que ofrece Google para el manejo de una base noSQL, autenticación de usuarios, manejo de multimedia, etc.</p>
+						<pre><code class="shell">$ npm install angularfire2 firebase --save</code></pre>
+					</section>
+				</section>
+
+				<section data-background="img/footer.png" data-state="footer">
+					<section>
+						<h4>Iniciar un nuevo proyecto en Ionic:</h4>
+						<pre><code class="shell">$ ionic start --v2 [nombreProyecto] [template]</code></pre>
+					</section>
+					<section>
+						<h4>Tipos de templates:</h4>
+					</section>
+				</section>
+
+				<section data-background="img/footer.png" data-state="footer">
+					
+				</section>
+
+				<section data-background="img/footer.png" data-state="footer">
+					
+				</section>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+			<script src="lib/js/head.min.js"></script>
+			<script src="js/reveal.js"></script>
+			<script>
+				// More info https://github.com/hakimel/reveal.js#configuration
+				Reveal.initialize({
+					history: true,
+
+					// More info https://github.com/hakimel/reveal.js#dependencies
+					dependencies: [
+						{ src: 'plugin/markdown/marked.js' },
+						{ src: 'plugin/markdown/markdown.js' },
+						{ src: 'plugin/notes/notes.js', async: true },
+						{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					]
+				});
+
+				Reveal.configure({ transition: 'fade' });
+			</script>
+		<!-- /Scripts -->
+	</body>
+</html>
