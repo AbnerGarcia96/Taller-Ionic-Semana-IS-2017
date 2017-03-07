@@ -33,7 +33,7 @@ export class LoginPage {
 				email: r.auth.email
 			};
 			window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
-			this.navCtrl.setRoot(HomePage);
+			this.navCtrl.pop(HomePage);
 		}).catch((e) => {
 			console.error(JSON.stringify(e));
 		});

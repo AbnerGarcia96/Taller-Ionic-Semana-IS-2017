@@ -1,0 +1,22 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Agregar post</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<ion-input type="text" placeholder="Contenido"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-input type="text" placeholder="URL Imagen"></ion-input>
+		</ion-item>
+
+		<button ion-button full (click)="agregarPost()">Agregar Post</button>
+	</ion-list>
+</ion-content>

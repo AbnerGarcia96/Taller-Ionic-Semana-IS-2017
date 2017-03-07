@@ -1,12 +1,44 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Inicio</ion-title>
-  </ion-navbar>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Inicio</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
+	<ion-card *ngFor="let post of posts | async">
 
+		<ion-item>
+			<ion-avatar item-left>
+				<img src="http://www.orangeandhoney.com/ChatPublico/img/icon_user.png">
+			</ion-avatar>
+			<h2>{{ post.usuario }}</h2>
+			<p>{{ post.fecha }}</p>
+		</ion-item>
+
+		<img src="{{ post.imagen }}">
+
+		<ion-card-content>
+			<p>{{ post.cuerpo }}</p>
+		</ion-card-content>
+
+		<ion-row>
+			<ion-col>
+				<button ion-button icon-left clear small>
+					<ion-icon name="thumbs-up"></ion-icon>
+					<div>{{ post.likes }} Likes</div>
+				</button>
+			</ion-col>
+
+			<ion-col>
+				<button ion-button icon-left clear small>
+				<ion-icon name="text"></ion-icon>
+				<div>{{ post.comentarios }} Comentarios</div>
+				</button>
+			</ion-col>
+		</ion-row>
+
+	</ion-card>
 </ion-content>
