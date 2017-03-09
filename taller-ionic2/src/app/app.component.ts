@@ -2,8 +2,11 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
+import { AngularFire } from 'angularfire2';
+
 import { HomePage } from '../pages/home/home';
 import { NuevoPostPage } from '../pages/nuevo-post/nuevo-post';
+import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,15 +18,22 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform) {
+  constructor(
+    public platform: Platform,
+    private af: AngularFire
+  ){
     this.initializeApp();
-
-    // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Nuevo Post', component: NuevoPostPage }
     ];
+  }
 
+  logout(){
+    console.log('Cerrando sesión');
+    this.af.auth.logout();
+    window.localStorage.removeItem('currentUser');
+    this.nav.push(LoginPage);
   }
 
   initializeApp() {
