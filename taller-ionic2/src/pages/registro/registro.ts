@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AngularFire } from 'angularfire2';
 
 import { HomePage } from '../home/home';
+import { LoginPage } from '../login/login';
 
 @Component({
 	selector: 'page-registro',
@@ -27,14 +28,8 @@ export class RegistroPage{
 			email: this.email,
 			password: this.password
 		}).then((r) => {
-			let nombreCompleto = this.nombre + this.apellido;
-			r.auth.displayName = nombreCompleto;
-			let currentUser = {
-				email: r.auth.email,
-				name: r.auth.displayName
-			};
-			window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
-			this.navCtrl.push(HomePage);
+			let nombreCompleto:any = this.nombre + this.apellido;
+			this.navCtrl.push(LoginPage);
 		}).catch((e) => {
 			console.error(e);
 		});

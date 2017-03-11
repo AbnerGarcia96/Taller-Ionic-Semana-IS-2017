@@ -10,11 +10,15 @@
 <ion-content padding>
 	<ion-list>
 		<ion-item>
-			<ion-input type="text" placeholder="Contenido"></ion-input>
+			<ion-input type="text" placeholder="Título" name="title" [(ngModel)]="title"></ion-input>
 		</ion-item>
 
 		<ion-item>
-			<ion-input type="text" placeholder="URL Imagen"></ion-input>
+			<ion-textarea type="text" placeholder="Contenido" name="content" [(ngModel)]="content"></ion-textarea>
+		</ion-item>
+
+		<ion-item>
+			<ion-input type="text" placeholder="URL Imagen" name="image" [(ngModel)]="image"></ion-input>
 		</ion-item>
 
 		<button ion-button full (click)="agregarPost()">Agregar Post</button>

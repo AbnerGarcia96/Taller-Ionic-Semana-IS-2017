@@ -9,36 +9,40 @@
 
 <ion-content padding>
 	<ion-card *ngFor="let post of posts | async">
-
 		<ion-item>
 			<ion-avatar item-left>
-				<img src="http://www.orangeandhoney.com/ChatPublico/img/icon_user.png">
+				<img src="{{ post.userImage }}">
 			</ion-avatar>
-			<h2>{{ post.usuario }}</h2>
-			<p>{{ post.fecha }}</p>
+			<h2>{{ post.title }}</h2>
+			<p>{{ post.userId }}</p>
 		</ion-item>
 
-		<img src="{{ post.imagen }}">
+		<img src="{{ post.image }}">
 
 		<ion-card-content>
-			<p>{{ post.cuerpo }}</p>
+			<p>{{ post.content }}</p>
 		</ion-card-content>
-
+		
+		<ion-row>
+			<ion-col center text-center>
+				<ion-note>{{ post.date }}</ion-note>
+			</ion-col>
+		</ion-row>
+		
 		<ion-row>
 			<ion-col>
 				<button ion-button icon-left clear small>
 					<ion-icon name="thumbs-up"></ion-icon>
-					<div>{{ post.likes }} Likes</div>
+					<div>0 Likes</div>
 				</button>
 			</ion-col>
 
 			<ion-col>
 				<button ion-button icon-left clear small>
 				<ion-icon name="text"></ion-icon>
-				<div>{{ post.comentarios }} Comentarios</div>
+				<div>0 Comentarios</div>
 				</button>
 			</ion-col>
 		</ion-row>
-
 	</ion-card>
 </ion-content>

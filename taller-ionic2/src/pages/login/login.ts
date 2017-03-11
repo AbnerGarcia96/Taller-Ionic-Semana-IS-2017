@@ -33,6 +33,7 @@ export class LoginPage {
 			}).then((r) => {
 				// console.log(r);
 				let currentUser = {
+					id: r.uid,
 					email: r.auth.email,
 					name: r.auth.displayName
 				};
@@ -53,8 +54,10 @@ export class LoginPage {
 			method: AuthMethods.Popup
 		}).then((r) => {
 			let currentUser = {
+				id: r.uid,
 				email: r.auth.email,
-				name: r.auth.displayName
+				name: r.auth.displayName,
+				image: r.auth.photoURL
 			}
 			window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
 			this.navCtrl.pop(HomePage);
@@ -69,8 +72,10 @@ export class LoginPage {
 			method: AuthMethods.Popup
 		}).then((r) => {
 			let currentUser = {
+				id: r.uid,
 				email: r.auth.email,
-				name: r.auth.displayName
+				name: r.auth.displayName,
+				image: r.auth.photoURL
 			}
 			window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
 			this.navCtrl.pop(HomePage);
