@@ -4,6 +4,7 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { AngularFire, AuthMethods, AuthProviders } from 'angularfire2';
 
 import { HomePage } from '../home/home'
+import { RegistroPage } from '../registro/registro'
 
 @Component({
 	selector: 'page-login',
@@ -30,9 +31,10 @@ export class LoginPage {
 				provider: AuthProviders.Password,
 				method: AuthMethods.Password
 			}).then((r) => {
-				console.log(r);
+				// console.log(r);
 				let currentUser = {
-					email: r.auth.email
+					email: r.auth.email,
+					name: r.auth.displayName
 				};
 				window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
 				this.navCtrl.pop(HomePage);
@@ -77,7 +79,9 @@ export class LoginPage {
 		});
 	}
 
-	register(){}
+	goToRegister(){
+		this.navCtrl.push(RegistroPage);
+	}
 
 	showToast(message){
 		let toast = this.toastCtrl.create({

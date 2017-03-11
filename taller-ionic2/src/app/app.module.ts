@@ -7,6 +7,7 @@ import { AngularFireModule } from 'angularfire2'
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { NuevoPostPage } from '../pages/nuevo-post/nuevo-post';
+import { RegistroPage } from '../pages/registro/registro';
 
 const config = {
   apiKey: "AIzaSyC7UYS0HjJCX6DuKONpGztIWZPeyheWHkc",
@@ -21,7 +22,8 @@ const config = {
     MyApp,
     HomePage,
     LoginPage,
-    NuevoPostPage
+    NuevoPostPage,
+    RegistroPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -32,7 +34,8 @@ const config = {
     MyApp,
     HomePage,
     LoginPage,
-    NuevoPostPage
+    NuevoPostPage,
+    RegistroPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
