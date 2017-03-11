@@ -1,5 +1,5 @@
 <ion-header>
-	<ion-navbar color="primary">
+	<ion-navbar hideBackButton="true" color="primary">
 		<ion-title>Login</ion-title>
 	</ion-navbar>
 </ion-header>
@@ -15,9 +15,26 @@
 			<ion-label floating>Contraseña</ion-label>
 			<ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
 		</ion-item>
-
-		<ion-item>
-			<button ion-button block (click)="login()">Login</button>
-		</ion-item>
+		<ion-row>
+			<ion-col>
+				<button icon-only ion-button full (click)="login()">
+					<ion-icon name="mail"></ion-icon>
+				</button>
+			</ion-col>
+			<ion-col>
+				<button icon-only ion-button full (click)="facebookLogin()">
+					<ion-icon name="logo-facebook"></ion-icon>
+				</button>
+			</ion-col>
+			<ion-col>
+				<button icon-only ion-button full (click)="googleLogin()">
+					<ion-icon name="logo-googleplus"></ion-icon>
+				</button>
+			</ion-col>
+		</ion-row>
 	</ion-list>	
+	<button ion-button icon-right right full (click)="register()">
+		Registrarse
+		<ion-icon name="create"></ion-icon>
+	</button>
 </ion-content>
