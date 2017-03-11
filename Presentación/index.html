@@ -29,52 +29,76 @@
 
 		<div class="reveal">
 			<div class="slides" data-state="global">
-				<section data-background="img/footer.png" data-state="footer">
+
+				<img class="footer" src="img/footer.png" alt="footer">
+
+				<section>
 					<h1>Desarrollo de Aplicaciones Híbridas con Ionic 2</h1>
 				</section>
 
 				<section  data-state="profile">
 					<h1>¿Quién soy?</h1>
 					<p>Abner García</p>
-					<p>Estudiante de 4to año de IS</p>
+					<p>Estudiante de 4to año en IS</p>
 					<p>Teléfono: +504 8784-5765</p>
-					<p>Correo: abnerjosgarfer@yahoo.com</p>
+					<p>
+						Correo: 
+						<a href="mailto:abnerjosgarfer@yahoo.com?Subject=Taller%20Ionic%202%20IS&amp;body=Estaré%20encantado%20de%20poder%20contestar%20todas%20sus%20dudas%20:)" target="_top">
+							abnerjosgarfer@yahoo.com
+						</a>
+					</p>
 					<p>Github: <a href="https://www.github.com/AbnerGarcia96">AbnerGarcia96</a></p>
 
-					<img src="img/profile.jpg" alt="">
+					<img class="pp" src="img/profile.jpg" alt="Abner">
 				</section>
 
-				<section data-background="img/footer.png" data-state="footer">
+				<section>
 					<h2>Descripción del taller</h2>
-					<p>El objetivo de este taller es aprender conceptos básicos sobre el desarrollo de aplicaciones híbridas utilizando Ionic 2, la segunda y más reciente versión de Ionic Framework y lograr recuperar, insertar, modificar y eliminar información de una base de datos remota</p>
+					<p>El objetivo de este taller es aprender conceptos básicos sobre el desarrollo de aplicaciones híbridas utilizando Ionic 2, así como la conexión a Google Firebase para manejar nuestra base de datos y autenticación de usuarios</p>
 				</section>
 
-				<section data-background="img/footer.png" data-state="footer">
+				<section>
 					<h2>Temario</h2>
 					<ul>
 						<li>
-							<p>Introducción a Angular 2</p>
+							<p>Angular 2</p>
 						</li>
 						<li>
-							<p>Introducción a Ionic 2</p>
+							<p>Ionic 2</p>
 						</li>
 						<li>
-							<p>Conexión a Google Firebase</p>
+							<p>Google Firebase 3</p>
 						</li>
 					</ul>
 				</section>
 
-				<section data-background="img/footer.png" data-state="footer">
+				<section>
+					<h2 class="hybrid-title">¿Aplicaciones híbridas?</h2>
+					<img class="hybrid" src="img/hybrid.png" alt="híbrido">
+				</section>
+
+				<section>
+					<img class="native" src="img/native.png" alt="native">
+				</section>
+
+				<section>
+					<h2 class="trend-title">Evolución</h2>
+					<img class="trend" src="img/trend.png" alt="trend">
+				</section>
+
+				<section>
 					<section>
 						<h1>Ionic 2</h1>
 						<p>Es la segunda y más reciente versión de Ionic Framework, el cual sirve para desarrollar aplicaciones móviles a partir de código Front-End</p>
 						<p>Utiliza HTML5 y CSS para la creación de las vistas y TypeScript para darle funcionalidad a estas vistas</p>
+						<img class="footer-ionic" src="img/footer-ionic.png" alt="footer-ionic">
 					</section>
+					
 					<section>
 						<h1>Dependencias</h1>
-						<h6>TypeScript:</h6>
-						<p>Transpilador que pasa el código de ES6 a código JS</p>
-						<pre><code class="shell">$ npm install -g typecript typings</code></pre>
+						<h6>NodeJS y NPM: </h6>
+						<p>NodeJS nos permite utilizar JavaScript del lado del servidor, utilizaremos el gestor de paquetes NPM para instalar nuestras dependencias</p>
+						<pre><code class="shell">$ npm install -g [package]</code></pre>
 					</section>
 					<section>
 						<h1>Dependencias</h1>
@@ -82,11 +106,20 @@
 						<p>Traduce el código en JavaScript a código nativo de cada sistema (Java para Android y Obj-C/Swift para iOS)</p>
 						<pre><code class="shell">$ npm install -g ionic cordova</code></pre>
 					</section>
+
 					<section>
 						<h1>Dependencias</h1>
 						<h6>Angular 2:</h6>
 						<p>Framework para JavaScript que nos permite utilizar ES6 para variables con tipos dentro de JavaScript</p>
 					</section>
+
+					<section>
+						<h1>Dependencias</h1>
+						<h6>TypeScript:</h6>
+						<p>Transpilador que pasa el código de ES6 a código JS</p>
+						<pre><code class="shell">$ npm install -g typecript typings</code></pre>
+					</section>
+
 					<section>
 						<h1>Dependencias</h1>
 						<h6>Google Firebase: </h6>
@@ -95,22 +128,12 @@
 					</section>
 				</section>
 
-				<section data-background="img/footer.png" data-state="footer">
+				<section>
 					<section>
-						<h4>Iniciar un nuevo proyecto en Ionic:</h4>
+						<h3>Iniciar un nuevo proyecto en Ionic:</h3>
 						<pre><code class="shell">$ ionic start --v2 [nombreProyecto] [template]</code></pre>
+						<img class="templates" src="img/templates.png" alt="templates">
 					</section>
-					<section>
-						<h4>Tipos de templates:</h4>
-					</section>
-				</section>
-
-				<section data-background="img/footer.png" data-state="footer">
-					
-				</section>
-
-				<section data-background="img/footer.png" data-state="footer">
-					
 				</section>
 			</div>
 		</div>
