@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 import { HomePage } from '../home/home';
 
@@ -35,6 +35,7 @@ export class NuevoPostPage {
 		let currentUser = JSON.parse(window.localStorage.getItem('currentUser'));
 		this.afPost.push({
 			userId: currentUser.id,
+			user: currentUser.email,
 			userImage: currentUser.image,
 			title: this.title,
 			content: this.content,

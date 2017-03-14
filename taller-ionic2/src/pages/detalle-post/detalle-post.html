@@ -15,15 +15,9 @@
 				{{ post.content }}
 			</ion-card-title>
 		</ion-card-content>
-		<ion-row>
-			<ion-col>
+		<ion-row center text-center>
+			<ion-col (click)="showPrompt()">
 				<button ion-button icon-left clear small>
-					<ion-icon name="thumbs-up"></ion-icon>
-					<div>Like</div>
-				</button>
-			</ion-col>
-			<ion-col>
-				<button ion-button icon-left clear small (click)="showPrompt()">
 					<ion-icon name="text"></ion-icon>
 					<div>Comentar</div>
 				</button>
@@ -34,12 +28,12 @@
 	<ion-card>
 		<ion-card-header>Comentarios</ion-card-header>
 		<ion-list>
-			<ion-item>
+			<ion-item *ngFor="let comment of comments | async">
 				<ion-avatar item-left>
-					<img src="img/avatar-finn.png">
+					<img src="{{ comment.image }}">
 				</ion-avatar>
-				<h3>Don't Know What To Do!</h3>
-				<p>I've had a pretty messed up day. If we just...</p>
+				<h3>{{ comment.email }}</h3>
+				<p>{{ comment.comment }}</p>
 			</ion-item>
 		</ion-list>
 	</ion-card>

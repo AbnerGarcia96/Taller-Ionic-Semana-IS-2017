@@ -12,7 +12,7 @@ import { DetallePostPage } from '../detalle-post/detalle-post';
 })
 
 export class HomePage {
-	posts: FirebaseListObservable<any>;
+	afPosts: FirebaseListObservable<any>;
 
 	constructor(
 		public navCtrl: NavController, 
@@ -22,10 +22,10 @@ export class HomePage {
 	){
 		// window.localStorage.removeItem('currentUser');
 		if(!this.isLoggedIn()){
-			console.log('Usuario registrado');
+			console.log('Usuario no registrado');
 			this.navCtrl.push(LoginPage);
 		}else{
-			this.getPosts();
+			this.afPosts = af.database.list('/posts');
 		}
 	}
 
@@ -40,10 +40,6 @@ export class HomePage {
 		}else{
 			return false;
 		}
-	}
-
-	getPosts(){
-		this.posts = this.af.database.list('/posts');
 	}
 
 	ionViewDidLoad() {

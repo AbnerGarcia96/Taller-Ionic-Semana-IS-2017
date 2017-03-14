@@ -8,40 +8,24 @@
 </ion-header>
 
 <ion-content padding>
-	<ion-card *ngFor="let post of posts | async">
-		<ion-item (click)="showModal(post)">
+	<ion-card *ngFor="let post of afPosts | async">
+		<ion-item>
 			<ion-avatar item-left>
 				<img src="{{ post.userImage }}">
 			</ion-avatar>
 			<h2>{{ post.title }}</h2>
-			<p>{{ post.userId }}</p>
+			<p>{{ post.user }}</p>
 		</ion-item>
 
-		<img src="{{ post.image }}">
+		<img src="{{ post.image }}" (click)="showModal(post)">
 
 		<ion-card-content>
 			<p>{{ post.content }}</p>
 		</ion-card-content>
 		
-		<ion-row>
-			<ion-col center text-center>
+		<ion-row center text-center>
+			<ion-col>
 				<ion-note>{{ post.date }}</ion-note>
-			</ion-col>
-		</ion-row>
-		
-		<ion-row>
-			<ion-col>
-				<button ion-button icon-left clear small (click)="showModal(post)">
-					<ion-icon name="thumbs-up"></ion-icon>
-					<div>0 Likes</div>
-				</button>
-			</ion-col>
-
-			<ion-col>
-				<button ion-button icon-left clear small (click)="showModal(post)">
-				<ion-icon name="text"></ion-icon>
-				<div>0 Comentarios</div>
-				</button>
 			</ion-col>
 		</ion-row>
 	</ion-card>
