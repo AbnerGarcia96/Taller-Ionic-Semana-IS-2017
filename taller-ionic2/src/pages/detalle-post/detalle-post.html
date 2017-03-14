@@ -26,7 +26,7 @@
 	</ion-card>
 	
 	<ion-card>
-		<ion-card-header>Comentarios</ion-card-header>
+		<ion-card-header>Comentarios ({{ (comments | async).length }})</ion-card-header>
 		<ion-list>
 			<ion-item *ngFor="let comment of comments | async">
 				<ion-avatar item-left>
