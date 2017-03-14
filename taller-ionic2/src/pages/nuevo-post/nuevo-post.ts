@@ -32,10 +32,10 @@ export class NuevoPostPage {
 
 	agregarPost(){
 		console.log('Agregando post');
-		let user = JSON.parse(window.localStorage.getItem('currentUser'));
+		let currentUser = JSON.parse(window.localStorage.getItem('currentUser'));
 		this.afPost.push({
-			userId: user.id,
-			userImage: user.image,
+			userId: currentUser.id,
+			userImage: currentUser.image,
 			title: this.title,
 			content: this.content,
 			image: this.image,

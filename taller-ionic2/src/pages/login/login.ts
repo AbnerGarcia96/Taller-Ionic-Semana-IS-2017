@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 
-import { AngularFire, AuthMethods, AuthProviders } from 'angularfire2';
+import { AngularFire, AuthMethods, AuthProviders, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
 
 import { HomePage } from '../home/home'
 import { RegistroPage } from '../registro/registro'
@@ -14,6 +14,7 @@ import { RegistroPage } from '../registro/registro'
 export class LoginPage {
 	email: any;
 	password: any;
+	user: FirebaseObjectObservable<any>;
 
 	constructor(
 		public navCtrl: NavController, 
@@ -35,10 +36,11 @@ export class LoginPage {
 				let currentUser = {
 					id: r.uid,
 					email: r.auth.email,
-					name: r.auth.displayName
+					name: r.auth.displayName,
+					image: 'https://lh3.googleusercontent.com/-cOXl_vZ6sDI/AAAAAAAAAAI/AAAAAAAAAAA/GQmyvunLZzc/photo.jpg'
 				};
 				window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
-				this.navCtrl.pop(HomePage);
+				this.navCtrl.setRoot(HomePage);
 			}).catch((e) => {
 				// console.error(JSON.stringify(e));
 				this.showToast('El Correo y la contraseña no coinciden');
@@ -58,7 +60,8 @@ export class LoginPage {
 				email: r.auth.email,
 				name: r.auth.displayName,
 				image: r.auth.photoURL
-			}
+			};
+			this.registrarUsuario(currentUser);
 			window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
 			this.navCtrl.pop(HomePage);
 		}).catch((e) => {
@@ -76,11 +79,22 @@ export class LoginPage {
 				email: r.auth.email,
 				name: r.auth.displayName,
 				image: r.auth.photoURL
-			}
+			};
+			this.registrarUsuario(currentUser);
 			window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
 			this.navCtrl.pop(HomePage);
 		}).catch((e) => {
 			console.log(JSON.stringify(e));
+		});
+	}
+
+	registrarUsuario(currentUser){
+		this.user = this.af.database.object('users/'+currentUser.id);
+		console.log(currentUser);
+		this.user.set({
+			email: currentUser.email,
+			name: currentUser.name,
+			image: currentUser.image
 		});
 	}
 
