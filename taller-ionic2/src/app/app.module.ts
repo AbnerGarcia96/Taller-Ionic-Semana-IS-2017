@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { NuevoPostPage } from '../pages/nuevo-post/nuevo-post';
 import { RegistroPage } from '../pages/registro/registro';
+import { DetallePostPage } from '../pages/detalle-post/detalle-post';
 
 const config = {
   apiKey: "AIzaSyC7UYS0HjJCX6DuKONpGztIWZPeyheWHkc",
@@ -23,7 +24,8 @@ const config = {
     HomePage,
     LoginPage,
     NuevoPostPage,
-    RegistroPage
+    RegistroPage,
+    DetallePostPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -35,7 +37,8 @@ const config = {
     HomePage,
     LoginPage,
     NuevoPostPage,
-    RegistroPage
+    RegistroPage,
+    DetallePostPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

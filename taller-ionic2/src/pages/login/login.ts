@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 
-import { AngularFire, AuthMethods, AuthProviders, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, AuthMethods, AuthProviders, FirebaseObjectObservable } from 'angularfire2';
 
 import { HomePage } from '../home/home'
 import { RegistroPage } from '../registro/registro'

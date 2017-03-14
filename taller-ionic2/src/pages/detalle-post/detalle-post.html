@@ -1,9 +1,46 @@
 <ion-header>
-	<ion-navbar>
-	<ion-title>detallePost</ion-title>
-	</ion-navbar>
+	<ion-row>
+			<ion-title>{{ post.title }}</ion-title>
+			<button ion-button clear color="primary" (click)="dismiss()">
+				<ion-icon name="close"></ion-icon>
+			</button>
+	</ion-row>
 </ion-header>
 
 <ion-content padding>
-
+	<ion-card>
+		<img src="{{ post.image }}"/>
+		<ion-card-content>
+			<ion-card-title>
+				{{ post.content }}
+			</ion-card-title>
+		</ion-card-content>
+		<ion-row>
+			<ion-col>
+				<button ion-button icon-left clear small>
+					<ion-icon name="thumbs-up"></ion-icon>
+					<div>Like</div>
+				</button>
+			</ion-col>
+			<ion-col>
+				<button ion-button icon-left clear small (click)="showPrompt()">
+					<ion-icon name="text"></ion-icon>
+					<div>Comentar</div>
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-card>
+	
+	<ion-card>
+		<ion-card-header>Comentarios</ion-card-header>
+		<ion-list>
+			<ion-item>
+				<ion-avatar item-left>
+					<img src="img/avatar-finn.png">
+				</ion-avatar>
+				<h3>Don't Know What To Do!</h3>
+				<p>I've had a pretty messed up day. If we just...</p>
+			</ion-item>
+		</ion-list>
+	</ion-card>
 </ion-content>

@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 
-import { HomePage } from '../home/home';
 import { LoginPage } from '../login/login';
 
 @Component({
