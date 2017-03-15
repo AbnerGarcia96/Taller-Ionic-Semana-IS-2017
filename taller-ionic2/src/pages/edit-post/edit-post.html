@@ -1,10 +1,10 @@
 <ion-header>
-	<ion-navbar color="primary">
-		<button ion-button menuToggle>
-			<ion-icon name="menu"></ion-icon>
-		</button>
-		<ion-title>Editar post</ion-title>
-	</ion-navbar>
+	<ion-row>
+			<ion-title>Editar Post</ion-title>
+			<button ion-button clear color="primary" (click)="dismiss()">
+				<ion-icon name="close"></ion-icon>
+			</button>
+	</ion-row>
 </ion-header>
 
 <ion-content padding>
@@ -21,6 +21,6 @@
 			<ion-input type="text" placeholder="URL Imagen" name="image" [(ngModel)]="image"></ion-input>
 		</ion-item>
 
-		<button ion-button full (click)="agregarPost()">Agregar Post</button>
+		<button ion-button full (click)="editPost()">Editar Post</button>
 	</ion-list>
 </ion-content>

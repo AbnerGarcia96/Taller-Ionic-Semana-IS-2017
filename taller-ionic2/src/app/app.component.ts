@@ -7,6 +7,7 @@ import { AngularFire } from 'angularfire2';
 import { HomePage } from '../pages/home/home';
 import { NuevoPostPage } from '../pages/nuevo-post/nuevo-post';
 import { LoginPage } from '../pages/login/login';
+import { MyPostsPage } from '../pages/my-posts/my-posts';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,6 +26,7 @@ export class MyApp {
     this.initializeApp();
     this.pages = [
       { title: 'Home', component: HomePage },
+      { title: 'Mis publicaciones', component: MyPostsPage },
       { title: 'Nuevo Post', component: NuevoPostPage }
     ];
   }
