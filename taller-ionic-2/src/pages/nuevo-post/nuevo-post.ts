@@ -31,7 +31,6 @@ export class NuevoPostPage {
 	}
 
 	agregarPost(){
-		console.log('Agregando post');
 		let currentUser = JSON.parse(window.localStorage.getItem('currentUser'));
 		this.afPost.push({
 			userId: currentUser.id,
